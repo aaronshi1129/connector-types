@@ -1,0 +1,1162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Connectors</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            color: #4338ca;
+            margin-bottom: 0.5rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1rem;
+        }
+        
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+        
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+        
+        .mt-4 {
+            margin-top: 1rem;
+        }
+        
+        .mt-8 {
+            margin-top: 2rem;
+        }
+        
+        .p-3 {
+            padding: 0.75rem;
+        }
+        
+        .p-4 {
+            padding: 1rem;
+        }
+        
+        .p-6 {
+            padding: 1.5rem;
+        }
+        
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        .rounded {
+            border-radius: 0.25rem;
+        }
+        
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+        
+        .shadow-md {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Grid layout */
+        .grid {
+            display: grid;
+            grid-gap: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Card styles */
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-blue {
+            background-color: #dbeafe;
+            border-top: 4px solid #3b82f6;
+        }
+        
+        .card-green {
+            background-color: #d1fae5;
+            border-top: 4px solid #10b981;
+        }
+        
+        .card-amber {
+            background-color: #fef3c7;
+            border-top: 4px solid #f59e0b;
+        }
+        
+        .card-white {
+            background-color: white;
+        }
+        
+        /* Connector group styles */
+        .connector-group {
+            border-left: 4px solid;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .border-blue {
+            border-color: #3b82f6;
+        }
+        
+        .border-purple {
+            border-color: #8b5cf6;
+        }
+        
+        .border-indigo {
+            border-color: #6366f1;
+        }
+        
+        .border-green {
+            border-color: #10b981;
+        }
+        
+        .border-teal {
+            border-color: #14b8a6;
+        }
+        
+        /* Text colors */
+        .text-blue {
+            color: #3b82f6;
+        }
+        
+        .text-purple {
+            color: #8b5cf6;
+        }
+        
+        .text-indigo {
+            color: #6366f1;
+        }
+        
+        .text-indigo-100 {
+            color: #e0e7ff;
+        }
+        
+        .text-indigo-300 {
+            color: #a5b4fc;
+        }
+        
+        .text-green {
+            color: #10b981;
+        }
+        
+        .text-teal {
+            color: #14b8a6;
+        }
+        
+        .text-amber {
+            color: #f59e0b;
+        }
+        
+        .text-gray {
+            color: #6b7280;
+        }
+        
+        .text-white {
+            color: white;
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        
+        .text-xs {
+            font-size: 0.75rem;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .font-medium {
+            font-weight: 500;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        /* Background colors */
+        .bg-blue-50 {
+            background-color: #eff6ff;
+        }
+        
+        .bg-green-50 {
+            background-color: #ecfdf5;
+        }
+        
+        .bg-teal-50 {
+            background-color: #f0fdfa;
+        }
+        
+        .bg-amber-50 {
+            background-color: #fffbeb;
+        }
+        
+        .bg-indigo-50 {
+            background-color: #eef2ff;
+        }
+        
+        .bg-indigo-800 {
+            background-color: #3730a3;
+        }
+        
+        .bg-white {
+            background-color: white;
+        }
+        
+        .bg-gray-100 {
+            background-color: #f3f4f6;
+        }
+        
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+        
+        .bg-indigo-600 {
+            background-color: #4f46e5;
+        }
+        
+        .bg-emerald-600 {
+            background-color: #059669;
+        }
+        
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+            color: white;
+        }
+        
+        .btn-indigo {
+            background-color: #4f46e5;
+        }
+        
+        .btn-indigo:hover {
+            background-color: #4338ca;
+        }
+        
+        .btn-emerald {
+            background-color: #059669;
+        }
+        
+        .btn-emerald:hover {
+            background-color: #047857;
+        }
+        
+        /* Form elements */
+        select {
+            appearance: none;
+            background-color: white;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            padding: 0.5rem 2rem 0.5rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+        
+        .select-error {
+            border-color: #ef4444;
+        }
+        
+        .select-success {
+            border-color: #10b981;
+        }
+        
+        /* Utility classes */
+        .flex {
+            display: flex;
+        }
+        
+        .flex-col {
+            flex-direction: column;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .justify-center {
+            justify-content: center;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .gap-2 {
+            gap: 0.5rem;
+        }
+        
+        .gap-4 {
+            gap: 1rem;
+        }
+        
+        .space-x-4 > * + * {
+            margin-left: 1rem;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+        
+        .space-y-6 > * + * {
+            margin-top: 1.5rem;
+        }
+        
+        .space-y-8 > * + * {
+            margin-top: 2rem;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .inline-block {
+            display: inline-block;
+        }
+        
+        .mx-1 {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+        
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* List styles */
+        ul.list-disc {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+        }
+        
+        /* Modal styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            padding: 2rem;
+            max-width: 28rem;
+            width: 100%;
+            margin: 0 1rem;
+        }
+        
+        /* Animations */
+        @keyframes success-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes error-shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+        
+        @keyframes shuffle {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            25% { transform: translateX(10px) translateY(-10px) rotate(5deg); }
+            50% { transform: translateX(-5px) translateY(5px) rotate(-3deg); }
+            75% { transform: translateX(5px) translateY(-5px) rotate(2deg); }
+            100% { transform: translateX(0) translateY(0) rotate(0deg); }
+        }
+        
+        .success-animation {
+            animation: success-pulse 0.5s;
+        }
+        
+        .error-animation {
+            animation: error-shake 0.5s;
+        }
+        
+        .shuffle-animation {
+            animation: shuffle 0.8s ease-in-out;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #3730a3;
+            color: #e0e7ff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        footer a {
+            color: #e0e7ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        /* Feedback styles */
+        .feedback-correct {
+            color: #10b981;
+        }
+        
+        .feedback-incorrect {
+            color: #ef4444;
+        }
+        
+        /* Border bottom for section headers */
+        .border-bottom {
+            border-bottom: 1px solid;
+            padding-bottom: 0.25rem;
+        }
+        
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .space-y-0 {
+                margin-top: 0;
+            }
+            
+            .md\:flex-row {
+                flex-direction: row;
+            }
+            
+            .md\:space-y-0 > * + * {
+                margin-top: 0;
+            }
+        }
+        
+        /* Transition effects */
+        .transition {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content container">
+        <h1 class="mb-2">Three Types of Connectors</h1>
+        <p class="text-center text-gray mb-8">Learn and practice using different types of connectors in English</p>
+        
+        <!-- Explanation Section -->
+        <section class="mb-8">
+            <h2>Explanation</h2>
+            
+            <div class="grid grid-cols-2 mb-8">
+                <!-- Connector Type 1: Conjunctions -->
+                <div class="card card-blue">
+                    <h3 class="text-blue mb-2">連接詞 Conjunctions</h3>
+                    <p class="text-gray mb-4">連接詞用來連接兩個句子或片語。</p>
+                    <p class="text-gray mb-2">Conjunctions connect two sentences or phrases.</p>
+                    
+                    <div class="connector-group border-blue">
+                        <h3 class="text-blue">Coordinating Conjunctions 並列連接詞</h3>
+                        <p class="text-sm text-gray mb-1">連接同等重要的句子或片語</p>
+                        <p class="text-sm text-gray mb-2">Connect sentences or phrases of equal importance</p>
+                        <div class="bg-white rounded-lg p-3 mb-3">
+                            <p class="font-medium text-blue">Examples:</p>
+                            <p class="text-gray">for, and, nor, but, or, yet, so</p>
+                            <p class="text-gray text-sm italic">(記憶口訣: FANBOYS)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector-group border-purple">
+                        <h3 class="text-purple">Correlative Conjunctions 關聯連接詞</h3>
+                        <p class="text-sm text-gray mb-1">成對使用的連接詞</p>
+                        <p class="text-sm text-gray mb-2">Conjunctions that work in pairs</p>
+                        <div class="bg-white rounded-lg p-3 mb-3">
+                            <p class="font-medium text-purple">Examples:</p>
+                            <p class="text-gray">both/and, either/or, neither/nor, not only/but also</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector-group border-indigo">
+                        <h3 class="text-indigo">Subordinating Conjunctions 從屬連接詞</h3>
+                        <p class="text-sm text-gray mb-1">連接主句和從句</p>
+                        <p class="text-sm text-gray mb-2">Connect main clauses with dependent clauses</p>
+                        <div class="bg-white rounded-lg p-3 mb-3">
+                            <p class="font-medium text-indigo">Examples:</p>
+                            <p class="text-gray">because, since, as, although, though, until, while, if, whether, whereas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg p-3 mt-4">
+                        <p class="italic text-gray">I was tired, <span class="font-bold text-blue">but</span> I finished my homework.</p>
+                        <p class="text-gray text-sm">我很累，<span class="font-bold">但是</span>我完成了我的作業。</p>
+                    </div>
+                </div>
+                
+                <!-- Connector Type 2: Relative Pronouns and Adverbs -->
+                <div class="card card-green">
+                    <h3 class="text-green mb-2">關係詞 Relative Words</h3>
+                    
+                    <div class="connector-group border-green">
+                        <h3 class="text-green">關係代名詞 Relative Pronouns</h3>
+                        <p class="text-gray mb-2">關係代名詞引導關係子句，提供額外信息。</p>
+                        <p class="text-gray mb-2">Relative pronouns introduce relative clauses that provide additional information.</p>
+                        <div class="bg-white rounded-lg p-3 mb-3">
+                            <p class="font-medium text-green">Examples:</p>
+                            <ul class="list-disc text-gray">
+                                <li>who (誰), whom (誰), whose (誰的)</li>
+                                <li>which (哪個), that (那個)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-3 mb-4">
+                            <p class="italic text-gray">The book <span class="font-bold text-green">which</span> I bought yesterday is interesting.</p>
+                            <p class="text-gray text-sm">我昨天買的那本書很有趣。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector-group border-teal">
+                        <h3 class="text-teal">關係副詞 Relative Adverbs</h3>
+                        <p class="text-gray mb-2">關係副詞引導關係子句，表示時間、地點或方式。</p>
+                        <p class="text-gray mb-2">Relative adverbs introduce relative clauses that express time, place, or manner.</p>
+                        <div class="bg-white rounded-lg p-3 mb-3">
+                            <p class="font-medium text-teal">Examples:</p>
+                            <ul class="list-disc text-gray">
+                                <li>where (哪裡) - place/location</li>
+                                <li>when (何時) - time</li>
+                                <li>why (為什麼) - reason</li>
+                                <li>how (如何) - manner</li>
+                            </ul>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-3">
+                            <p class="italic text-gray">This is the restaurant <span class="font-bold text-teal">where</span> we had dinner last night.</p>
+                            <p class="text-gray text-sm">這是我們昨晚吃晚餐的餐廳。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conjunction Reference List (Always Visible) -->
+                <div class="card card-white">
+                    <h3 class="mb-4">Conjunction Reference List 連接詞參考列表</h3>
+                    
+                    <div class="mb-4">
+                        <h3 class="text-blue border-bottom mb-2">Coordinating Conjunctions 並列連接詞</h3>
+                        <p class="text-gray">for, and, nor, but, or, yet, so</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="text-purple border-bottom mb-2">Correlative Conjunctions 關聯連接詞</h3>
+                        <p class="text-gray">both/and, either/or, neither/nor, not only/but also</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-indigo border-bottom mb-2">Subordinating Conjunctions 從屬連接詞</h3>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-gray">
+                            <div>
+                                <p>because, since, as</p>
+                                <p>although, though, even though</p>
+                                <p>until, while, by the time</p>
+                                <p>as long as, as soon as</p>
+                            </div>
+                            <div>
+                                <p>in case, so that, provided that</p>
+                                <p>if, as if, whether, as though</p>
+                                <p>now that, even if, whereas</p>
+                                <p>no matter wh-, wh-ever</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <!-- Connector Type 3: Semicolon -->
+                <div class="card card-amber">
+                    <h3 class="text-amber mb-2">分號 Semicolon (;)</h3>
+                    <p class="text-gray mb-4">分號連接兩個相關的獨立子句，不使用連接詞。</p>
+                    <p class="text-gray mb-2">Semicolons connect two related independent clauses without using a conjunction.</p>
+                    <div class="bg-white rounded-lg p-3 mb-3">
+                        <p class="font-medium text-amber">Usage:</p>
+                        <ul class="list-disc text-gray">
+                            <li>連接兩個相關的完整句子</li>
+                            <li>Connects two related complete sentences</li>
+                            <li>替代連接詞 (and, but, or)</li>
+                            <li>Replaces conjunctions</li>
+                        </ul>
+                    </div>
+                    <div class="bg-amber-50 rounded-lg p-3">
+                        <p class="italic text-gray">I love reading<span class="font-bold text-amber">;</span> books are my favorite pastime.</p>
+                        <p class="text-gray text-sm">我喜歡閱讀；書籍是我最喜歡的消遣。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Exercise Section - Simple Dropdown Selects -->
+        <section>
+            <h2>Exercise 練習</h2>
+            
+            <div class="card shadow-lg mb-8">
+                <div class="bg-indigo-50 p-4 rounded-lg mb-6">
+                    <p class="text-center text-gray font-medium">從下拉菜單中選擇正確的連接工具</p>
+                    <p class="text-center text-gray font-medium">Select the correct connector from the dropdown menu</p>
+                </div>
+                
+                <div id="exercise-container" class="space-y-6">
+                    <!-- Exercise questions will be generated here -->
+                </div>
+                
+                <div class="mt-8 flex justify-center gap-4">
+                    <button id="check-answers" class="btn btn-indigo">
+                        檢查答案 Check Answers
+                    </button>
+                    <button id="new-practice" class="btn btn-emerald">
+                        新題目 New Questions
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Score Modal - Now properly hidden by default -->
+        <div id="score-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 class="text-indigo text-center mb-4">你的得分 Your Score</h2>
+                <div id="score-content" class="text-center font-bold mb-6"></div>
+                <div id="feedback-content" class="text-center text-gray mb-6"></div>
+                <div class="flex justify-center">
+                    <button id="close-modal" class="btn btn-indigo">
+                        關閉 Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Updated Footer with Links -->
+    <footer class="bg-indigo-800 text-indigo-100 py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
+                <!-- Links -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.aaronshi.cc" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-white transition duration-300">
+                        Go to AaronShi.cc
+                    </a>
+                    <span class="text-indigo-300">|</span>
+                    <a href="https://app.aaronshi.cc" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-white transition duration-300">
+                        Back to AaronShi.cc App
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // All JavaScript code is now embedded directly in the HTML file
+        // No external dependencies or files needed
+        
+        // Game data
+        const practiceData = {
+            coordinatingConjunctions: [
+                { text: "and", translation: "和" },
+                { text: "but", translation: "但是" },
+                { text: "or", translation: "或者" },
+                { text: "so", translation: "所以" },
+                { text: "yet", translation: "然而" },
+                { text: "for", translation: "因為" },
+                { text: "nor", translation: "也不" }
+            ],
+            correlativeConjunctions: [
+                { text: "both", translation: "兩者都" },
+                { text: "either", translation: "要麼" },
+                { text: "neither", translation: "既不" },
+                { text: "not only", translation: "不僅" }
+            ],
+            subordinatingConjunctions: [
+                { text: "because", translation: "因為" },
+                { text: "although", translation: "雖然" },
+                { text: "when", translation: "當...時" },
+                { text: "if", translation: "如果" },
+                { text: "since", translation: "自從" },
+                { text: "while", translation: "當...時" },
+                { text: "until", translation: "直到" },
+                { text: "as", translation: "因為/當" },
+                { text: "though", translation: "雖然" },
+                { text: "whereas", translation: "然而" },
+                { text: "so that", translation: "以便" }
+            ],
+            relativePronouns: [
+                { text: "who", translation: "誰" },
+                { text: "which", translation: "哪個" },
+                { text: "that", translation: "那個" },
+                { text: "whose", translation: "誰的" },
+                { text: "whom", translation: "誰(受詞)" }
+            ],
+            relativeAdverbs: [
+                { text: "where", translation: "哪裡" },
+                { text: "when", translation: "何時" },
+                { text: "why", translation: "為什麼" },
+                { text: "how", translation: "如何" }
+            ],
+            sentences: [
+                {
+                    text: "I was tired, _____ I still went to the party.",
+                    translation: "我很累，_____ 我還是去參加了派對。",
+                    answer: "but",
+                    type: "coordinatingConjunctions"
+                },
+                {
+                    text: "The book _____ I bought yesterday is interesting.",
+                    translation: "我昨天買的那本書很有趣。",
+                    answer: "which",
+                    type: "relativePronouns"
+                },
+                {
+                    text: "I love reading _____ books are my favorite pastime.",
+                    translation: "我喜歡閱讀 _____ 書籍是我最喜歡的消遣。",
+                    answer: ";",
+                    type: "semicolon"
+                },
+                {
+                    text: "She will come to the meeting _____ she finishes her work.",
+                    translation: "她完成工作後 _____ 會來參加會議。",
+                    answer: "when",
+                    type: "subordinatingConjunctions"
+                },
+                {
+                    text: "The man _____ lives next door is a doctor.",
+                    translation: "住在隔壁的那個人是醫生。",
+                    answer: "who",
+                    type: "relativePronouns"
+                },
+                {
+                    text: "He didn't study _____ he failed the exam.",
+                    translation: "他沒有學習 _____ 他考試不及格。",
+                    answer: ";",
+                    type: "semicolon"
+                },
+                {
+                    text: "This is the restaurant _____ we had dinner last night.",
+                    translation: "這是我們昨晚吃晚餐的餐廳。",
+                    answer: "where",
+                    type: "relativeAdverbs"
+                },
+                {
+                    text: "I'll call you _____ I arrive at the airport.",
+                    translation: "我到達機場時會給你打電話。",
+                    answer: "when",
+                    type: "relativeAdverbs"
+                },
+                {
+                    text: "She studied hard _____ she could pass the exam.",
+                    translation: "她努力學習 _____ 她能通過考試。",
+                    answer: "so that",
+                    type: "subordinatingConjunctions"
+                },
+                {
+                    text: "_____ my brother and I enjoy playing tennis.",
+                    translation: "_____ 我和我的兄弟都喜歡打網球。",
+                    answer: "Both",
+                    type: "correlativeConjunctions"
+                },
+                {
+                    text: "You can have _____ tea or coffee.",
+                    translation: "你可以喝 _____ 茶或咖啡。",
+                    answer: "either",
+                    type: "correlativeConjunctions"
+                }
+            ]
+        };
+
+        // Utility function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+            return array;
+        }
+
+        // Setup Practice Mode with Dropdown Selects
+        function setupPracticeMode() {
+            // Clear container
+            const exerciseContainer = document.getElementById('exercise-container');
+            exerciseContainer.innerHTML = '';
+            
+            // Get random sentences
+            const shuffledSentences = shuffleArray([...practiceData.sentences]).slice(0, 5);
+            
+            // Create exercise questions
+            shuffledSentences.forEach((sentence, index) => {
+                createExerciseQuestion(sentence, index);
+            });
+        }
+        
+        function createExerciseQuestion(sentence, index) {
+            const exerciseContainer = document.getElementById('exercise-container');
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'bg-gray-100 p-4 rounded-lg';
+            questionDiv.setAttribute('data-answer', sentence.answer);
+            questionDiv.setAttribute('data-index', index);
+            
+            // Create sentence display
+            const sentenceText = document.createElement('p');
+            sentenceText.className = 'mb-2';
+            
+            // Split the sentence at the blank
+            const parts = sentence.text.split('_____');
+            
+            // Create the sentence with a dropdown in the middle
+            const firstPart = document.createTextNode(parts[0]);
+            sentenceText.appendChild(firstPart);
+            
+            // Create dropdown container
+            const dropdownContainer = document.createElement('span');
+            dropdownContainer.className = 'inline-block mx-1';
+            
+            // Create select element
+            const select = document.createElement('select');
+            select.className = 'answer-select';
+            select.setAttribute('data-question-index', index);
+            
+            // Add default option
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = '-- Select --';
+            defaultOption.selected = true;
+            defaultOption.disabled = true;
+            select.appendChild(defaultOption);
+            
+            // Generate options for this question
+            const options = generateOptions(sentence);
+            
+            // Add options to select
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.text;
+                optionElement.textContent = option.text + (option.translation ? ` (${option.translation})` : '');
+                select.appendChild(optionElement);
+            });
+            
+            dropdownContainer.appendChild(select);
+            sentenceText.appendChild(dropdownContainer);
+            
+            // Add second part of sentence
+            const secondPart = document.createTextNode(parts[1]);
+            sentenceText.appendChild(secondPart);
+            
+            // Create translation
+            const translationText = document.createElement('p');
+            translationText.className = 'text-gray text-sm mb-2';
+            translationText.textContent = sentence.translation;
+            
+            // Create feedback element (initially hidden)
+            const feedbackElement = document.createElement('div');
+            feedbackElement.className = 'mt-2 hidden';
+            feedbackElement.id = 'feedback-' + index;
+            
+            // Add elements to question div
+            questionDiv.appendChild(sentenceText);
+            questionDiv.appendChild(translationText);
+            questionDiv.appendChild(feedbackElement);
+            
+            // Add question to container
+            exerciseContainer.appendChild(questionDiv);
+        }
+        
+        function generateOptions(sentence) {
+            let options = [];
+            
+            // Add the correct answer
+            if (sentence.answer === ';') {
+                options.push({ text: ';', translation: '分號' });
+            } else {
+                // Find the correct answer object with translation
+                let correctOption;
+                
+                if (sentence.type === 'coordinatingConjunctions') {
+                    correctOption = practiceData.coordinatingConjunctions.find(c => c.text === sentence.answer);
+                } else if (sentence.type === 'correlativeConjunctions') {
+                    correctOption = practiceData.correlativeConjunctions.find(c => c.text === sentence.answer);
+                } else if (sentence.type === 'subordinatingConjunctions') {
+                    correctOption = practiceData.subordinatingConjunctions.find(c => c.text === sentence.answer);
+                } else if (sentence.type === 'relativePronouns') {
+                    correctOption = practiceData.relativePronouns.find(c => c.text === sentence.answer);
+                } else if (sentence.type === 'relativeAdverbs') {
+                    correctOption = practiceData.relativeAdverbs.find(c => c.text === sentence.answer);
+                }
+                
+                options.push(correctOption || { text: sentence.answer, translation: '' });
+            }
+            
+            // Add distractors based on the type
+            let distractors = [];
+            
+            if (sentence.type === 'coordinatingConjunctions') {
+                distractors = shuffleArray([...practiceData.coordinatingConjunctions.filter(c => c.text !== sentence.answer)]);
+            } else if (sentence.type === 'correlativeConjunctions') {
+                distractors = shuffleArray([...practiceData.correlativeConjunctions.filter(c => c.text !== sentence.answer)]);
+            } else if (sentence.type === 'subordinatingConjunctions') {
+                distractors = shuffleArray([...practiceData.subordinatingConjunctions.filter(c => c.text !== sentence.answer)]);
+            } else if (sentence.type === 'relativePronouns') {
+                distractors = shuffleArray([...practiceData.relativePronouns.filter(c => c.text !== sentence.answer)]);
+            } else if (sentence.type === 'relativeAdverbs') {
+                distractors = shuffleArray([...practiceData.relativeAdverbs.filter(c => c.text !== sentence.answer)]);
+            } else if (sentence.type === 'semicolon') {
+                // For semicolon, add some conjunctions as distractors
+                distractors = [
+                    { text: 'and', translation: '和' },
+                    { text: ',', translation: '逗號' },
+                    { text: ':', translation: '冒號' }
+                ];
+            }
+            
+            // Add 3 distractors (or fewer if not enough available)
+            options = [...options, ...distractors.slice(0, 3)];
+            
+            // Shuffle the options
+            return shuffleArray(options);
+        }
+
+        // Show Score Modal
+        function showScoreModal(correct, total) {
+            const scoreModal = document.getElementById('score-modal');
+            const scoreContent = document.getElementById('score-content');
+            const feedbackContent = document.getElementById('feedback-content');
+            
+            const percentage = Math.round((correct / total) * 100);
+            scoreContent.textContent = correct + ' / ' + total + ' (' + percentage + '%)';
+            
+            if (percentage === 100) {
+                feedbackContent.textContent = '太棒了！你完全掌握了這些連接工具！\nExcellent! You\'ve mastered these connectors!';
+            } else if (percentage >= 70) {
+                feedbackContent.textContent = '做得好！繼續練習！\nGood job! Keep practicing!';
+            } else {
+                feedbackContent.textContent = '再試一次！你可以做得更好！\nTry again! You can do better!';
+            }
+            
+            // Make sure the modal is visible
+            scoreModal.classList.remove('hidden');
+        }
+
+        // Initialize the exercise when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make sure the modal is hidden on page load
+            const scoreModal = document.getElementById('score-modal');
+            scoreModal.classList.add('hidden');
+            
+            setupPracticeMode();
+            
+            // Check Answers button click handler
+            document.getElementById('check-answers').addEventListener('click', function() {
+                const questions = document.querySelectorAll('#exercise-container > div');
+                let correct = 0;
+                let total = questions.length;
+                let allAnswered = true;
+                
+                questions.forEach(question => {
+                    const correctAnswer = question.getAttribute('data-answer');
+                    const select = question.querySelector('select');
+                    const index = question.getAttribute('data-index');
+                    const feedbackElement = document.getElementById('feedback-' + index);
+                    
+                    // Reset feedback
+                    feedbackElement.className = 'mt-2';
+                    feedbackElement.textContent = '';
+                    
+                    if (!select.value) {
+                        allAnswered = false;
+                        select.className = 'answer-select select-error';
+                        question.className = 'bg-gray-100 p-4 rounded-lg error-animation';
+                        setTimeout(function() {
+                            question.className = 'bg-gray-100 p-4 rounded-lg';
+                        }, 500);
+                        return;
+                    }
+                    
+                    const userAnswer = select.value;
+                    
+                    if (userAnswer === correctAnswer) {
+                        select.className = 'answer-select select-success';
+                        feedbackElement.className = 'mt-2 feedback-correct';
+                        feedbackElement.textContent = '✓ Correct! 正確!';
+                        question.className = 'bg-gray-100 p-4 rounded-lg success-animation';
+                        setTimeout(function() {
+                            question.className = 'bg-gray-100 p-4 rounded-lg';
+                        }, 500);
+                        correct++;
+                    } else {
+                        select.className = 'answer-select select-error';
+                        feedbackElement.className = 'mt-2 feedback-incorrect';
+                        feedbackElement.textContent = '✗ Incorrect. The correct answer is: ' + correctAnswer;
+                        question.className = 'bg-gray-100 p-4 rounded-lg error-animation';
+                        setTimeout(function() {
+                            question.className = 'bg-gray-100 p-4 rounded-lg';
+                        }, 500);
+                    }
+                    
+                    feedbackElement.style.display = 'block';
+                });
+                
+                if (allAnswered) {
+                    showScoreModal(correct, total);
+                } else {
+                    alert('請回答所有問題！\nPlease answer all questions!');
+                }
+            });
+            
+            // New Practice Questions button click handler
+            document.getElementById('new-practice').addEventListener('click', function() {
+                const exerciseContainer = document.getElementById('exercise-container');
+                setupPracticeMode();
+                exerciseContainer.className = 'space-y-6 shuffle-animation';
+                setTimeout(function() {
+                    exerciseContainer.className = 'space-y-6';
+                }, 800);
+            });
+            
+            // Close Modal button click handler
+            document.getElementById('close-modal').addEventListener('click', function() {
+                document.getElementById('score-modal').classList.add('hidden');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959f534ec3624aa4',t:'MTc1MTYzOTQ3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
